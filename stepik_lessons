@@ -16,3 +16,21 @@ print(*new_list, sep='\n')
 s = str(input())
 separ = str(input())
 print(*s, sep=separ)
+
+
+
+#На вход программе подается строка текста, содержащая различные натуральные числа. Из данной строки формируется список чисел. Напишите программу, которая меняет местами минимальный и максимальный элемент этого списка.
+
+numbers = str(input())
+num_list = numbers.split()
+for i in range(len(num_list)):
+    num_list[i] = int(num_list[i])
+max_n = max(num_list)
+min_n = min(num_list)
+#print(max_n, min_n)
+max_index = num_list.index(max_n)
+min_index = num_list.index(min_n)
+
+num_list[max_index] = min_n
+num_list[min_index] = max_n
+print(num_list)
